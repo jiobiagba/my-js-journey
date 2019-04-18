@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="style.css" href="https://fonts.googleapis.com/css?family=Fredoka+One|Kalam">
+        <title>
+            Version 2.0
+        </title>
+    </head>
+    <body onload = "alert('Just move mouse over texts and image!!!')">
+   
+    <div id="header" class="header">
+        <h1 onmouseover = "newHead(this)" onmouseout = "oldHead(this)">My JavaScript Journey</h1>
+        <script>
+            function newHead(id) {
+                id.innerHTML = "A Summary of my JavaScript Journey...";
+            }
+
+            function oldHead(id) {
+                id.innerHTML = "My JavaScript Journey";
+            }
+        </script>
+    </div>
+    <div id="row" class="row">
+        <div id="column" class="column">
+            <div id="row1" class="newrow">First Chatbot</div>
+            <div id="row2" class="newrow">Node Needed</div>
+            <div id="row3" class="newrow">Quick JS</div>
+            <div id="row4" class="newrow">Dialog Flow</div>
+            <div id="row5" class="newrow">CSX</div>
+            <div id="row6" class="newrow">What Next?</div>
+        </div>
+        <script>
+        //Manipulating div with id as row1
+        function changeOne() {
+            var changeRowOne = document.createElement("p");
+            changeRowOne.setAttribute("id", "newP1");
+            var textOne = document.createTextNode("Lessons on cognitive class during the second quarter of 2018 made me feel I knew all about making chatbots. And why wouldn't I? I did a bot using Watson Assistant which I deployed on a Wordpress Site!...");
+            changeRowOne.appendChild(textOne);
+
+            var rowOne = document.getElementById("row1");
+            rowOne.appendChild(changeRowOne);
+        }
+
+        function unchangeOne() {
+            var getRow1 = document.getElementById("row1");
+            var getP1 = document.getElementById("newP1");
+            getRow1.removeChild(getP1);
+        }
+        
+        document.getElementById("row1").addEventListener("mouseover", changeOne);
+        document.getElementById("row1").addEventListener("mouseout", unchangeOne);
+
+        //Manipulating div with id as row2
+        function changeTwo() {
+            var changeRowTwo = document.createElement("p");
+            changeRowTwo.setAttribute("id", "newP2");
+            var textTwo = document.createTextNode("... then came the INEC Bot project. I thought NO CODE NEEDED for bot making but this project, after a number of analysis, needed code to run in Node. And so my headaches began...");
+            changeRowTwo.appendChild(textTwo);
+
+            var rowTwo = document.getElementById("row2");
+            rowTwo.appendChild(changeRowTwo);
+        }
+
+        function unchangeTwo() {
+            var getRow2 = document.getElementById("row2");
+            var getP2 = document.getElementById("newP2");
+            getRow2.removeChild(getP2);
+        }
+        
+        document.getElementById("row2").addEventListener("mouseover", changeTwo);
+        document.getElementById("row2").addEventListener("mouseout", unchangeTwo);
+
+
+        //Manipulating div with id as row3
+        function changeThree() {
+            var changeRowThree = document.createElement("p");
+            changeRowThree.setAttribute("id", "newP3");
+            var textThree = document.createTextNode("Online I went to see if I could get a good understanding of JavaScript and do the project, but I was overwhelmed by JavaScript ...");
+            changeRowThree.appendChild(textThree);
+
+            var rowThree = document.getElementById("row3");
+            rowThree.appendChild(changeRowThree);
+        }
+
+        function unchangeThree() {
+            var getRow3 = document.getElementById("row3");
+            var getP3 = document.getElementById("newP3");
+            getRow3.removeChild(getP3);
+        }
+        
+        document.getElementById("row3").addEventListener("mouseover", changeThree);
+        document.getElementById("row3").addEventListener("mouseout", unchangeThree);
+
+
+        //Manipulating div with id as row4
+        function changeFour() {
+            var changeRowFour = document.createElement("p");
+            changeRowFour.setAttribute("id", "newP4");
+            var textFour = document.createTextNode("...along the line, Dialogflow was recommended. This, however, didn't solve my problems as I still needed to write JavaScript that will run in Node... By December 2018, my boss had to outsource the project. It was a painful failure for me.");
+            changeRowFour.appendChild(textFour);
+
+            var rowFour = document.getElementById("row4");
+            rowFour.appendChild(changeRowFour);
+        }
+
+        function unchangeFour() {
+            var getRow4 = document.getElementById("row4");
+            var getP4 = document.getElementById("newP4");
+            getRow4.removeChild(getP4);
+        }
+        
+        document.getElementById("row4").addEventListener("mouseover", changeFour);
+        document.getElementById("row4").addEventListener("mouseout", unchangeFour);
+
+        //Manipulating div with id as row5
+        function changeFive() {
+            var changeRowFive = document.createElement("p");
+            changeRowFive.setAttribute("id", "newP5");
+            var textFive = document.createTextNode("Around December 2018, Israel Obiagba - my brother who is also a FrontEnd developer - recommended CodeSmith and I started CSX. CodeSmith made me fall in love with JavaScript!");
+            changeRowFive.appendChild(textFive);
+
+            var rowFive = document.getElementById("row5");
+            rowFive.appendChild(changeRowFive);
+        }
+
+        function unchangeFive() {
+            var getRow5 = document.getElementById("row5");
+            var getP5 = document.getElementById("newP5");
+            getRow5.removeChild(getP5);
+        }
+        
+        document.getElementById("row5").addEventListener("mouseover", changeFive);
+        document.getElementById("row5").addEventListener("mouseout", unchangeFive);
+
+
+        //Manipulating div with id as row6
+        function changeSix() {
+            var changeRowSix = document.createElement("p");
+            changeRowSix.setAttribute("id", "newP6");
+            var textSix = document.createTextNode("First, I'll take up the CSX challenge to stand a chance of getting percentages off CS Prep. Next, I'll give CS Prep my best shot to become a better developer. Then, I'll keep learning programming and work towards being a top problem solver in the world!!! By the way, if it happens I can afford it, I'll apply for CodeSmith's Ultimate Software Program!");
+            changeRowSix.appendChild(textSix);
+
+            var rowSix = document.getElementById("row6");
+            rowSix.appendChild(changeRowSix);
+        }
+
+        function unchangeSix() {
+            var getRow6 = document.getElementById("row6");
+            var getP6 = document.getElementById("newP6");
+            getRow6.removeChild(getP6);
+        }
+        
+        document.getElementById("row6").addEventListener("mouseover", changeSix);
+        document.getElementById("row6").addEventListener("mouseout", unchangeSix);
+        </script>
+        <div id="column" class="column">
+            <div id="responsive" class="responsive">
+                <div id="gallery" class="gallery">
+                    <img src="moi.jpg" alt="My Picture" height="600" width="600">
+                    <div id="desc" class="desc">Joseph Obiagba</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <h5>This is my second attempt at making this web page.</h5>
+    </div>
+    </body>
+</html>
