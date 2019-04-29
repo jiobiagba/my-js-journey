@@ -3,7 +3,7 @@
     <head>
             <link rel="stylesheet" type="text/css" href="style.css" href="https://fonts.googleapis.com/css?family=Fredoka+One|Kalam">
         <title>
-            Version 2.0
+            My JS Journey 3.0
         </title>
     </head>
     <body onload = "alert('Just move mouse over texts and image!!!')">
@@ -19,7 +19,17 @@
                 id.innerHTML = "My JavaScript Journey";
             }
         </script>
+        <div id="row" class="row">
+            <div id="columnheader1" class="columnheader1">
+                <button type="button" onclick="getJoke()" class="jokebutton">Joke</button>
+            </div>
+            <div id="columnheader2" class="columnheader2">
+                <p id="joke" class="joke">Click the button to see random jokes of Chuck Norris from icndb.com </p>
+            </div>
+        </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
     <div id="row" class="row">
         <div id="column" class="column">
             <div id="row1" class="newrow">First Chatbot</div>
@@ -163,7 +173,16 @@
         </div>
     </div>
     <div id="footer" class="footer">
-        <h5>This is my second attempt at making this web page.</h5>
+        <h5 onmouseover="changeFooter(this)" onmouseout="restoreFooter(this)">This is my second attempt at making this web page.</h5>
+        <script>
+            function changeFooter(id) {
+                id.innerHTML = "Well, now this is my THIRD attempt!!! Better than version 2.0 right?";
+            }
+
+            function restoreFooter(id) {
+                id.innerHTML = "This is my second attempt at making this web page.";
+            }
+        </script>
     </div>
     </body>
 </html>
