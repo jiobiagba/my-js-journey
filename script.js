@@ -16,7 +16,7 @@ function getJoke() {
     jokeElement.innerHTML = "";
 
     //Call in formating functions in axios object. Axios is called using CDN in index.html
-    axios.get('http://api.icndb.com/jokes/random?')
+    axios.get('https://api.icndb.com/jokes/random?')
     .then(response => {
         jokeElement.innerHTML = postJoke(response);
     })
